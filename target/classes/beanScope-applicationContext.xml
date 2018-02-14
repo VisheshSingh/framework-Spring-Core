@@ -11,7 +11,7 @@
     <bean id="myFortune" class="com.vishesh.framework_spring.HappyFortuneService"></bean>
     
      <!--Inject the Constructor dependency -->
-	<bean id="myCoach" class="com.vishesh.framework_spring.CricketCoach">
+	<bean id="myCoach" class="com.vishesh.framework_spring.CricketCoach" scope="prototype">
 		<constructor-arg ref="myFortune"></constructor-arg>
 	</bean>
 
