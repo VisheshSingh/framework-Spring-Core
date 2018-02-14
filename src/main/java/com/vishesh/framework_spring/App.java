@@ -9,7 +9,7 @@ public class App {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		// retrieve the bean
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		Coach theCoach = context.getBean("myGolfCoach", Coach.class);
 
 		// call the methods on the bean
 		System.out.println(theCoach.getDailyWorkout());
