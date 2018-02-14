@@ -25,10 +25,4 @@
 		<property name="team" value="${team}"></property>
 	</bean>
 	
-	<!--Inject the Random Fortune Service -->
-	<bean id="randomService" class="com.vishesh.framework_spring.RandomFortuneService"></bean>
-	<!--Inject the Constructor dependency -->
-	<bean id="myGolfCoach" class="com.vishesh.framework_spring.GolfCoach">
-		<constructor-arg ref="randomService"></constructor-arg>
-	</bean>
 </beans>

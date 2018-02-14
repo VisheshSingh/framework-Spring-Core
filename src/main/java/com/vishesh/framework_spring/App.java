@@ -6,7 +6,7 @@ public class App {
 	public static void main(String[] args) {
 
 		// load the spring config file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
 
 		// retrieve the bean
 		Coach theCoach = context.getBean("myGolfCoach", Coach.class);
