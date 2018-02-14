@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+	<!--Get the properties from sports.properties -->
+	<context:property-placeholder location="classpath:sports.properties"/>
+	
     <!--Define the dependency -->
     <bean id="myFortune" class="com.vishesh.framework_spring.HappyFortuneService"></bean>
     
@@ -18,8 +21,8 @@
 	<!--Inject the setter method -->
 	<bean id="myCricketCoach" class="com.vishesh.framework_spring.CricketCoach">
 		<property name="fortuneService" ref="myFortune"></property>
-		<property name="emailAddress" value="theBestCoach@gmail.com"></property>
-		<property name="team" value="Sunrisers"></property>
+		<property name="emailAddress" value="${email}"></property>
+		<property name="team" value="${team}"></property>
 	</bean>
 	
 </beans>
